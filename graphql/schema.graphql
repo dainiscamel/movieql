@@ -1,0 +1,20 @@
+
+# TO DO
+# 1.사용자가 뭘 할지 정의
+# 2.데이터베이스로부터로부터 정보를 얻음 (=query)
+# 3. 정보를 데이터베이스로 보냄
+# => 결론적으로 GraphQL 서버에 해야 할건 어떤 mutation(데이터 변형) 그리고 어떤 Query 들을 가지는지를 정의.
+
+type Person {
+  id: Int!
+  name: String!
+  age: Int!
+  gender: String!
+}
+
+type Query {
+  people: [Person]!
+  person(id: Int!): Person
+}
+
+
