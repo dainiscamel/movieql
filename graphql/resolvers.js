@@ -1,11 +1,9 @@
-// resolver란 ? Query를 해결함
-
-import { people } from "./db"
-
+import { getMovies } from "./db";
 
 const resolvers = {
   Query: {
-   people: () => people
- }
+    movies: (_, { rating, limit }) => getMovies(limit, rating)
+  }
 };
+
 export default resolvers;
